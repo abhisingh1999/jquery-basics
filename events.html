@@ -1,0 +1,62 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button themeColor="tomato">Red</button>
+    <button themeColor="teal">Green</button>
+    <button themeColor="dodgerblue">Blue</button>
+    <button themeColor="orange">Orange</button>
+    <button themeColor="purple">Purple</button>
+    <button themeClear>Clear</button>
+    <section class="theme-bg">
+      <h1>Heading</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
+        vitae deserunt soluta distinctio voluptate tempore at, commodi
+        perferendis blanditiis voluptatem voluptates saepe magnam impedit. Esse
+        nemo eaque tenetur incidunt nisi.
+      </p>
+    </section>
+    <section>
+      <h1>Heading</h1>
+      <p class="theme-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+        nesciunt consectetur quo repellendus temporibus quas earum saepe ipsum
+        nemo dolor cum reprehenderit eligendi. Ut eveniet quisquam aspernatur et
+        quis deleniti!
+      </p>
+    </section>
+    <section>
+      <h1 class="theme-text">Heading</h1>
+      <p class="theme-bg">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+        nesciunt consectetur quo repellendus temporibus quas earum saepe ipsum
+        nemo dolor cum reprehenderit eligendi. Ut eveniet quisquam aspernatur et
+        quis deleniti!
+      </p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("button[themeColor]").click(function () {
+          $(".theme-text").css("color", $(this).attr("themeColor"));
+          $(".theme-bg").css("background-color", $(this).attr("themeColor"));
+          $(".theme-bg").css("color", "white");
+        });
+        $("button[themeClear]").click(function () {
+          $(".theme-text").css("color", "black");
+          $(".theme-bg").css("background-color", "white");
+          $(".theme-bg").css("color", "black");
+        });
+      });
+    </script>
+  </body>
+</html>
